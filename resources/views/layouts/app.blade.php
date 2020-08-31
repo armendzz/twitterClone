@@ -26,7 +26,24 @@
         </header>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container ">
+ 
+                <div class="row">
+                    @if (auth()->check())
+                    <div class="col-md-2 block"> @include('/layouts/_side-left') </div>
+                    @endif
+                    
+                    <div class="col-sm block ">
+            
+                       @yield('content')
+            
+                    </div>
+                    @if (auth()->check())
+                    <div class="col-md-2 block"> @include('/layouts/_side-right')</div>
+                    @endif
+                </div>
+            
+            </div>
         </main>
     </div>
 </body>
