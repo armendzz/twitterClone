@@ -1,7 +1,5 @@
-@extends('layouts.app')
 
-@section('content')
-
+<x-app>
 
   
     <div class="row border">
@@ -24,5 +22,4 @@
 
   @include('/layouts/_timeline', ['tweets' => $user->tweets])
 
-
-@endsection
+</x-app>

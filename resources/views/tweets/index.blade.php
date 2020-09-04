@@ -1,8 +1,5 @@
-@extends('layouts.app')
 
-@section('content')
-
+<x-app>
      @include('/layouts/_publish')
      @include('/layouts/_timeline')
-      
-@endsection
+</x-app>

@@ -10904,3 +10904,10 @@ a.text-dark:focus {
   }
 }
 
+#following {
+  color: white;
+}
+
+#following:hover {
+  color: black;
+}

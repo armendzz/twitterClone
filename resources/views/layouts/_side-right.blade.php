@@ -1,4 +1,9 @@
-<h1>Following</h1>
+
+   <div class="bg-info p-1 text-white rounded">
+    
+    <fieldset>
+        <legend>Following</legend>
+
 
     <ul class="list-unstyled">
         @foreach (auth()->user()->follows as $user)
@@ -7,8 +12,11 @@
         <li class="mt-2" >
             <div>
             <a href="{{ route('profile', $user) }}"> <img src="{{ $user->avatar }}" alt="" class="rounded-circle" ></a>
-            <a href="{{ route('profile', $user) }}">  <span class="mr-2">{{ $user->name }}</span> </a>
+            <a href="{{ route('profile', $user) }}" id="following">  <span class="mr-2">{{ $user->name }}</span> </a>
             </div>
         </li>
         @endforeach
     </ul>
+</fieldset>
+
+</div>
