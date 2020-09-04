@@ -16,8 +16,14 @@
 <div class="col-sm-5 mt-2">
   
   <x-follow-button :user="$user"></x-follow-button>
+
+
+    @can('edit', $user)
+    <a href="{{ $user->path('edit') }}" class="btn btn-info float-right mr-2 float-right">Edit</a>
+    @endcan
+     
     
-     <button  class="btn btn-info float-right mr-2 float-right">Edit</button>
+   
     
 </div>
 </div>
