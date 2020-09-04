@@ -11,7 +11,7 @@
         
 </div>
 <div class="col-sm-2">
-<img src="{{ $user->avatar }}"  class="rounded-circle border border-primary" alt="" height="100%" width="100%" style="position: absolute; bottom: 30px;">
+<img src="{{ $user->avatar }}"  class="rounded-circle border border-primary" alt="" height="130px" width="130px" style="position: absolute; bottom: 30px;">
 </div>
 <div class="col-sm-5 mt-2">
   

@@ -6,7 +6,7 @@
 
 
     <ul class="list-unstyled">
-        @foreach (auth()->user()->follows as $user)
+        @forelse (auth()->user()->follows as $user)
            
       
         <li class="mt-2" >
@@ -15,7 +15,10 @@
             <a href="{{ route('profile', $user) }}" id="following">  <span class="mr-2">{{ $user->name }}</span> </a>
             </div>
         </li>
-        @endforeach
+
+        @empty 
+        <p>No Friends yet!</p>
+        @endforelse
     </ul>
 </fieldset>
 
