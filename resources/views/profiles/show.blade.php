@@ -14,8 +14,11 @@
 <img src="{{ $user->avatar }}"  class="rounded-circle border border-primary" alt="" height="100%" width="100%" style="position: absolute; bottom: 30px;">
 </div>
 <div class="col-sm-5 mt-2">
-    <button class="btn btn-success float-right float-right">+ Follow Me</button>
-     <button class="btn btn-info float-right mr-2 float-right">Edit</button>
+  
+  <x-follow-button :user="$user"></x-follow-button>
+    
+     <button  class="btn btn-info float-right mr-2 float-right">Edit</button>
+    
 </div>
 </div>
 
