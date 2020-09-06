@@ -11,7 +11,7 @@
       
         <li class="mt-2" >
             <div>
-            <a href="{{ route('profile', $user) }}"> <img src="{{ $user->avatar }}" alt="" class="rounded-circle" ></a>
+            <a href="{{ route('profile', $user) }}"> <img src="{{ $user->avatar }}" alt="" class="rounded-circle" height="40" width="40"></a>
             <a href="{{ route('profile', $user) }}" id="following">  <span class="mr-2">{{ $user->name }}</span> </a>
             </div>
         </li>

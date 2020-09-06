@@ -39,16 +39,25 @@ class User extends Authenticatable
     ];
 
     public function getAvatarAttribute($value){
-        return  asset('storage/' . $value);
+        if (isset($value)) {
+            return  asset('storage/' . $value);
+        }   else {
+            return  asset('storage/avatars/deafult-avatar.png');
+        }
+        
     }
 
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 
     public function timeline(){
         
         $ids = $this->follows()->pluck('id');
         $ids->push($this->id);
        
-        return Tweet::whereIn('user_id', $ids)->latest()->get();
+        return Tweet::whereIn('user_id', $ids)->latest()->paginate(5);
 
     }
 

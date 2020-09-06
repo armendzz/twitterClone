@@ -29,6 +29,6 @@
 </div>
 
 
-  @include('/layouts/_timeline', ['tweets' => $user->tweets])
+  @include('/layouts/_timeline', ['tweets' => $tweets ])
 
 </x-app>

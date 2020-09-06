@@ -10,7 +10,7 @@
  
          </div>
         @if (auth()->check())
-        <div class="col-md-2 block"> @include('/layouts/_side-right')</div>
+        <div class="col-md-3 block"> @include('/layouts/_side-right')</div>
         @endif
     </div>
 </x-master>
